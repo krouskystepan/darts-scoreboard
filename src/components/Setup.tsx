@@ -181,13 +181,13 @@ export default function Setup({
           {hasSaved && (
             <div className="flex gap-2">
               <button
-                className="cursor-pointer rounded-xl border border-emerald-500/40 bg-emerald-500/10 px-4 py-2 text-emerald-200"
+                className="cursor-pointer rounded-xl border border-emerald-500/40 bg-emerald-500/10 px-4 py-2 text-emerald-200 text-sm sm:text-base"
                 onClick={onResume}
               >
                 POKRAČOVAT VE HŘE
               </button>
               <button
-                className="cursor-pointer rounded-xl border border-zinc-800 bg-zinc-900 px-4 py-2 text-zinc-200"
+                className="cursor-pointer rounded-xl border border-zinc-800 bg-zinc-900 px-4 py-2 text-zinc-200 text-sm sm:text-base"
                 onClick={onClearSaved}
               >
                 VYMAZAT HRU
@@ -199,10 +199,10 @@ export default function Setup({
 
       <div className="grid gap-4 lg:grid-cols-[1fr_420px]">
         <div className="rounded-2xl border border-zinc-800 bg-zinc-950 p-5">
-          <div className="flex flex-col h-full justify-between">
+          <div className="space-y-3 flex flex-col h-full justify-between">
             <div className="space-y-2">
               <div className="text-sm text-zinc-400">Hráči</div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {slots.map((p, index) => {
                   const isPlaceholder = p === null
                   return (
@@ -213,7 +213,7 @@ export default function Setup({
                       }`}
                     >
                       <input
-                        className="max-w-48 flex-1 rounded-xl border border-zinc-800 bg-zinc-950 p-2 text-zinc-100"
+                        className="w-full flex-1 rounded-xl border border-zinc-800 bg-zinc-950 p-2 text-zinc-100"
                         value={p?.name ?? 'XXXXX'}
                         readOnly={isPlaceholder}
                         tabIndex={isPlaceholder ? -1 : 0}
